@@ -34,7 +34,7 @@ function getName() {
 
   //Code Here
 function welcome(){
-  userName = gitName();
+  userName = getName();
   alert("Welcome, " + userName);
 }
 
@@ -46,7 +46,7 @@ function welcome(){
 //What is the difference between arguments and parameters?
 
   //Answer Here
-An argument is actual info and paramenter is a variable representing info.
+// An argument is actual info and paramenter is a variable representing info.
 
 //////////////////PROBLEM 5////////////////////
 
@@ -56,7 +56,7 @@ An argument is actual info and paramenter is a variable representing info.
 
 
   //Answer Here
-false, NaN, 0, undefined, null, "", to find out if something is falsey check to see if it is one of the 6 falsey values.
+// false, NaN, 0, undefined, null, "", to find out if something is falsey check to see if it is one of the 6 falsey values.
 
 
 //////////////////PROBLEM 6////////////////////
@@ -74,7 +74,7 @@ function myName() {
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-var newMyName = myName();
+var newMyName = myName;
 //Now alert the result of invoking newMyName
 
 alert (newMyName);
@@ -86,11 +86,15 @@ alert (newMyName);
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-function outerFn(){
-  return 
-}
+  function outerFn(){
+    var sayName = function (){
+      return "amanda";
+    }
+    return sayName;
+  }
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
-
+  //Code Here;
+var innerFn= outerFn();
 //Now invoke innerFn.
+innerFn();
